@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+	transition: all .4s linear;
+}
+
+.header{
+  width: 100%;
+  height: 100px;
+  background:#ffd740;background-image: -webkit-linear-gradient(30deg, #607D8B 40%, 	#B0BEC5 60%)
+}
+.cerceve{
+  height: 300px;
+  width: 290px;
+  margin-left: 360px;
+  margin-top: 20px;
+  background: url(img/ay1.jpg);
+/*background:#ffd740;background-image: -webkit-linear-gradient(30deg, #607D8B 30%, 	#B0BEC5 70%);*/
+}
+.ay{
+background:#ffd740;background-image: -webkit-linear-gradient(30deg, #607D8B 40%, 	#B0BEC5 60%);
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  margin-left: 30px;
+  margin-top: -300px;
+
+
+
+  border-style:ridge;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+
+}
+
+.planet{
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    margin-right: 20px;
+    margin-bottom: 350px;
+}
+.planet .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 350px;
+}
+.planetEarth{
+    position: absolute;
+    min-width: 50%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 350px;
+}
+.planetEarth .loader{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius:50%;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+         }
+    100%{
+        transform: rotate(360deg);
+        }
+    }
+
+.planetEarth .loader::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to top,transparent,rgba(242,242,242,.4));
+    background-size:200px 360px;
+    background-repeat: no-repeat;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+}
+.planetEarth .loader span{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+}
+@keyframes animateEarth{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 100%;
+    }
+}
+.planetEarth .loader::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    background: #F0F0DF;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 10px #F0F0DF,
+                0 0 20px   #F0F0DF,
+                0 0 30px   #F0F0DF,
+                0 0 40px   #F0F0DF,
+                0 0 50px   #F0F0DF,
+                0 0 60px   #F0F0DF,
+                0 0 70px   #F0F0DF,
+                0 0 80px   #F0F0DF,
+                0 0 90px   #F0F0DF,
+                0 0 100px   #F0F0DF;
+}
+.earth{
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    background:url(img/ay.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 10px #86C2B4,
+                      0 0 100px #86C2B4;
+    animation: animateEarth 20s linear infinite;
+}

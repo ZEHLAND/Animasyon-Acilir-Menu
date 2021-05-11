@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+
+background:#ffd740;background-image: -webkit-linear-gradient(30deg, #90A4AE 40%, #263238 60%)
+}
+.action{   //ilk div
+    position: fixed; /*ekran boyutu değişse bile kendini olduğu yerde sabitler . */
+    top: 20px;
+    right: 30px;
+    margin-right:10px;
+}
+.action .profil{ /* ilk divin içinde (iç içe divler) */
+    position: relative; /*kendinden bir önceki elemente göre kendini yeniden konumlar. */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /*border : çizgi kalınlığı*/
+    overflow: hidden;
+    cursor: pointer;
+    float: right;
+    right: 0;
+    margin-right:15px;
+    margin-top: 5px;
+}
+.action .profil img{ /* içteki divin img düzenlemesi */
+    position:relative; /*absolute tarayıcının sol üst köşesine göre hiza alır .*/
+    top: 0;
+    right: 0;
+    width: 100%; /*% sayfanın genişliğine ve uzunluğuna göre kendini ayarlar . */
+    height: 100%;
+    object-fit: cover;
+}
+.action .menu {
+    position: absolute;/*absolute tarayıcının sol üst köşesine göre hiza alır . */
+    top: 120px;
+    right: -10px;
+    padding: 10px 20px;
+    background: #fff;
+    width: 200px;
+    box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    transition: .5s;
+    visibility: hidden;
+    opacity: 0;
+    margin-right:15px;
+
+}
+.action .menu.active{
+    top: 88px;
+    visibility: visible;
+    opacity: 1;
+}
+.action .menu::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 28px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+.action .menu h3{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 0;
+    font-weight: 500;
+    color: #555;
+    line-height: 1.2em;
+}
+.action .menu h3 span{
+    font-size: 14px;
+    color: #797878;
+    font-weight: 400;
+}
+.action .menu ul li{
+    list-style: none;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0,0,0,.05);
+    display: flex;
+    align-items: center;
+}
+.action .menu ul li img{
+    max-width: 25px;
+    margin-right: 10px;
+    opacity: .5;
+    transition: .5s;
+}
+.action .menu ul li:hover img{
+    opacity: 1;
+}
+
+
+
+.action .menu ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: .5s;
+}
+.action .menu ul li:hover a{
+    color: #ff5d94;
+}
